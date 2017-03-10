@@ -2,7 +2,7 @@
     mangler.py
     Author: MC_GitFlow
     Python3
-    Last Modified: 2017-02-21
+    Last Modified: 2017-03-10
 
     Functions:
       > store_cli_args()
@@ -690,15 +690,15 @@ def generate_dictionary(input_terms, output, pw_count, results):
     if not os.path.exists("./generated"):
         os.makedirs("./generated")
 
-    with open("./generated/" + output, "w+") as resulting_lsit:
+    with open("./generated/" + output, "w+") as resulting_list:
         for word in results:
             if count == pw_count:
                 break
-            resulting_lsit.write(word + "\n")
+            resulting_list.write(word + "\n")
             count += 1
             if input_terms:
                 try:
-                    resulting_lsit.write(next(pws))
+                    resulting_list.write(next(pws))
                     count += 1
                 except StopIteration:
                     input_terms = False

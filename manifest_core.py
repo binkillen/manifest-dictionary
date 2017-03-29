@@ -2,7 +2,7 @@
 
 """
     Author: MC_GitFlow
-    Last Modified: 2017-02-21
+    Last Modified: 2017-03-29 14:31:31 CT
     Python 3
 
     Generate a dictionary list as a text file using permutations of terms
@@ -89,7 +89,8 @@ def main():
         # generate txt file of wordlist, combine with any third party lists
         save_dictionary(user_params, results)
 
-        print("Dictionary list generated: generated/" + user_params["output_file"])
+        print("Dictionary list generated: generated/" +
+              user_params["output_file"])
 
 
 if __name__ == "__main__":

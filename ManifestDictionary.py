@@ -2,7 +2,7 @@
 
 """
     Author: MC_GitFlow
-    Last Modified: 2017-02-21
+    Last Modified: 2017-04-02
     Python 3
 
     Interactive menu to make use of manifest_core script
@@ -31,8 +31,11 @@ import BookKeeper
 import mangler
 
 
+# check for and import config template for session list
 if not os.path.isfile("config.json"):
     copyfile("config_template.json", "config.json")
+
+# parse json config into sorted categories and create BookKeeper for session
 CRITERIA = mangler.parse_json("config.json")
 CATEGORIES = [item for item in CRITERIA if item[0] != "_"]
 CATEGORIES.sort()

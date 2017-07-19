@@ -438,8 +438,8 @@ def permute_criteria(criteria):
 
     # not using permutation on birthdays
 
-    return mangled, collections["other"], collections["phone_numbers"], \
-        phones, street_nums, years, zips, collections["birthdays"]
+    return collections["birthdays"], mangled, collections["other"], \
+        collections["phone_numbers"], phones, street_nums, years, zips
 
 
 def permute_collections(collections):

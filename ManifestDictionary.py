@@ -293,7 +293,8 @@ def main():
     first_run = True  # indicates to show directions on first run of loop
 
     # begin interactive menu loop
-    while True:
+    running = True
+    while running:
         try:
             main_menu = build_menu(active_category, first_run)
             selection = int(input(main_menu).strip())
@@ -323,7 +324,7 @@ def main():
                 run_script(additional_list)
                 break
             elif selection == 99:
-                break
+                running = False
             else:
                 print(
                     "\033[1;31mError: please enter a valid option.\033[0;34m")

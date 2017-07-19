@@ -2,7 +2,7 @@
     mangler.py
     Author: MC_GitFlow
     Python3
-    Last Modified: 2017-03-10
+    Last Modified: 2017-07-14
 
     Functions:
       > store_cli_args()
@@ -387,6 +387,7 @@ def permute_criteria(criteria):
         :return: various collections of permuted data from JSON template
     """
     collections = {
+        "birthdays": criteria["birthdays"] if criteria["birthdays"] else [],
         "cities": criteria["cities"] if criteria["cities"] else [],
         "colors": criteria["colors"] if criteria["colors"] else [],
         "family": criteria["family"] if criteria["family"] else [],
@@ -399,8 +400,7 @@ def permute_criteria(criteria):
         "sports": criteria["sports"] if criteria["sports"] else [],
         "states": criteria["states"] if criteria["states"] else [],
         "streets": criteria["street_numbers"] if criteria["streets"] else [],
-        "zip_codes": criteria["zip_codes"] if criteria["zip_codes"] else [],
-        "birthdays": criteria["birthdays"] if criteria["birthdays"] else []
+        "zip_codes": criteria["zip_codes"] if criteria["zip_codes"] else []
     }
 
     # permute lists for base passwords using function mangle
@@ -483,11 +483,12 @@ def permute_other(base, other):
         marker += 1
 
 
-def add_suffixes(base, phone_numbers, street_nums, years, zips, birthdays):
+def add_suffixes(base, birthdays, phone_numbers, street_nums, years, zips):
     """
         Add suffix of additional common variations to existing base
 
         :param base: current collection of words
+        :param birthdays: collection of birthday permutations
         :param phone_numbers: permutations of phones
         :param street_nums: permutations of street numbers
         :param years: permutations of years

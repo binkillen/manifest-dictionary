@@ -178,7 +178,7 @@ def run_script(additional_list):
     if additional_list:
         if input("Combine 3rd party list? [y/n]: ").strip().lower() == "y":
             use_list = True
-    execution_string = "python3 manifest_core.py"
+    execution_string = "python manifest_core.py"
     execution_string += " -f " + cfg_file
     if min_length:
         execution_string += " --min " + min_length

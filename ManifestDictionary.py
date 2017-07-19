@@ -7,8 +7,6 @@
 
     Interactive menu to make use of manifest_core script
     Uses BookKeeper class to manage content used for generating wordlist.
-    
-    [Note: current menu color styling intendended for Bash Shell]
 
     Functions:
       > show_categories()
@@ -299,7 +297,7 @@ def main():
     while running:
         try:
             main_menu = build_menu(active_category, first_run)
-            selection = int(str(input(main_menu)).strip())
+            selection = int(input(main_menu).strip())
         except ValueError:
             add_blank_lines()
             print("\033[1;31mError: please enter a numeric value.\033[0;34m")

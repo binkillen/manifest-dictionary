@@ -2,11 +2,13 @@
 
 """
     Author: MC_GitFlow
-    Last Modified: 2017-04-02
+    Last Modified: 2017-07-19
     Python 3
 
     Interactive menu to make use of manifest_core script
     Uses BookKeeper class to manage content used for generating wordlist.
+    
+    [Note: current menu color styling intendended for Bash Shell]
 
     Functions:
       > show_categories()

@@ -507,7 +507,7 @@ def add_suffixes(base, birthdays, phone_numbers, street_nums, years, zips):
             "123",
             "123!",
             "1234",
-            "01"
+            "01",
             "18",
             "21",
             "99"

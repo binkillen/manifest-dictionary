@@ -19,14 +19,10 @@
 
 
 class BookKeeper(object):
-    """
-        Manage dictionary of terms mapped by categories
-    """
+    """Manage dictionary of terms mapped by categories"""
 
     def __init__(self):
-        """
-            Create dictionary of terms with mapping by category
-        """
+        """Create dictionary of terms with mapping by category"""
         self._categories = {}
 
     def add_category(self, category_name):
@@ -123,13 +119,9 @@ class BookKeeper(object):
         return False
 
     def reset_database(self):
-        """
-            Remove all categories and words
-        """
+        """Remove all categories and words"""
         self._categories.clear()
 
     def export_database(self):
-        """
-            Return object dictionary
-        """
+        """Return object dictionary"""
         return self._categories

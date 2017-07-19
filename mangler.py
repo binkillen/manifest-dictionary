@@ -2,7 +2,7 @@
     mangler.py
     Author: MC_GitFlow
     Python3
-    Last Modified: 2017-07-14
+    Last Modified: 2017-07-19
 
     Functions:
       > store_cli_args()
@@ -501,13 +501,16 @@ def add_suffixes(base, birthdays, phone_numbers, street_nums, years, zips):
 
         generic_addons = [
             "!",
-            "1",
+            "1"
+            "11",
+            "12",
             "123",
             "123!",
             "1234",
-            "123456",
+            "01"
             "18",
-            "21"
+            "21",
+            "99"
         ]
 
         for generic in generic_addons:

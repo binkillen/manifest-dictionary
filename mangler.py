@@ -501,7 +501,7 @@ def add_suffixes(base, birthdays, phone_numbers, street_nums, years, zips):
 
         generic_addons = [
             "!",
-            "1"
+            "1",
             "11",
             "12",
             "123",
